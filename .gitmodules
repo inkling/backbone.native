@@ -1,0 +1,3 @@
+[submodule "specs/jasmine-all"]
+	path = specs/jasmine-all
+	url = git://github.com/searls/jasmine-all.git
