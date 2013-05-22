@@ -1,3 +1,7 @@
+/**
+ * Tests for Backbone to ensure that it works as expected when depending on Backbone.Native.
+ */
+
 // Capture the Backbone global so when the tests run they use the correct version of Backbone.
 (function(Backbone){
     "use strict";
@@ -26,7 +30,6 @@
                 view = new (Backbone.View.extend({
                     el: '.root'
                 }));
-                debugger;
 
                 expect(view.el).toBe(this.element.querySelector('.root'));
                 expect(view.$el).toBeInstanceOf(Backbone.Native);

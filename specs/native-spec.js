@@ -1,3 +1,6 @@
+/**
+ * Unit tests for the behavior of Backbone.Native without relying on Backbone.
+ */
 describe('Backbone.Native', function(){
     "use strict";
 
