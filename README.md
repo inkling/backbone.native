@@ -17,7 +17,7 @@ jQuery.
 Simply drop backbone.native.min.js into a page after Backbone has been loaded and it will
 automatically set itself up with Backbone, and create `$` and `Backbone.Native`.
 
-## Major differences between jQuery and Backbone.Native
+## Major differences between jQuery and Native APIs
 
 The goal of this library is to keep the code as simple as possible while preserving Backbone's
 core functionality. The only jQuery-like functionality provided are the parts that are
@@ -46,8 +46,9 @@ have standard `Array` functionality.
 
 ### Selector limitations
 
-Selectors must be compatible with `querySelector`, which leads to
-[two primary changes](http://ejohn.org/blog/thoughts-on-queryselectorall/) in selector behavior.
+Selectors must be compatible with `querySelector`, which leads to two primary changes in
+selector behavior. For more details, see
+[John Resig's blog post on the subject](http://ejohn.org/blog/thoughts-on-queryselectorall/)
 
 1. Selectors beginning with `>` are not supported, so developers must take possible child views
    into account when writing selectors.
@@ -76,7 +77,7 @@ argument to all event handlers.
         'click .child': 'clickChildEvent'
     },
     clickChildEvent: function(event, childElement){
-        // childElement instead of event.currentTarget
+        // Use childElement instead of event.currentTarget
     }
 
 ### XHR
@@ -89,9 +90,9 @@ object is also not returned from the AJAX request, so developers must rely on th
 
 `$.ready` has not been implemented, instead deferring to the `DOMContentLoaded` event.
 
-    $.on(document, 'DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function(){
         // Code to run when the DOM has loaded.
-    });
+    }, false);
 
 ## Compatibility
 
