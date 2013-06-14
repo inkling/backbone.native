@@ -462,7 +462,7 @@
     if (root.Backbone){
         if (root.Backbone.setDomLibrary){ // v0.9.2
             root.Backbone.setDomLibrary($);
-        } else if (!root.Backbone.$){ // v0.9.9
+        } else { // v1.0.0
             root.Backbone.$ = $;
         }
     }
