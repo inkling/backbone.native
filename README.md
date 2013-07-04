@@ -1,4 +1,3 @@
-
 # Backbone.Native
 
 Backbone.Native is a substitute for jQuery meant to allow Backbone to function with the minimum
@@ -48,7 +47,7 @@ have standard `Array` functionality.
 
 Selectors must be compatible with `querySelector`, which leads to two primary changes in
 selector behavior. For more details, see
-[John Resig's blog post on the subject](http://ejohn.org/blog/thoughts-on-queryselectorall/)
+[John Resig's blog post on the subject](http://ejohn.org/blog/thoughts-on-queryselectorall/).
 
 1. Selectors beginning with `>` are not supported, so developers must take possible child views
    into account when writing selectors.
