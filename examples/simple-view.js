@@ -12,7 +12,7 @@ App.Views.Parent = Backbone.View.extend({
     },
 
     clickChildEvent: function(event, childElement){
-        childElement.classList.toggle(‘clicked’);
+        childElement.classList.toggle('clicked');
     }
 });
 
