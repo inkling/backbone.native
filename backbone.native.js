@@ -447,6 +447,10 @@
     $.on = on;
     $.off = off;
 
+    if(typeof exports !== 'undefined') {
+      return module.exports = $;
+    }
+
     var root = this;
     var originalBackboneNative = root.Backbone ? root.Backbone.Native : null;
     var original$ = root.$;
