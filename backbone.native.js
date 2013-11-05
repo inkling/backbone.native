@@ -447,7 +447,7 @@
     $.on = on;
     $.off = off;
 
-    if(typeof exports !== 'undefined') {
+    if (typeof exports !== 'undefined') {
       return module.exports = $;
     }
 
