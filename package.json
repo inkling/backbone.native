@@ -1,0 +1,35 @@
+{
+  "name": "backbone.native",
+  "version": "1.0.0",
+  "description": "A tiny drop-in replacement for jQuery to allow Backbone to work.",
+  "main": "backbone.native.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inkling/backbone.native.git"
+  },
+  "keywords": [
+    "backbone",
+    "jquery",
+    "native"
+  ],
+  "contributors": [
+    {
+      "name": "Logan Smyth",
+      "email": "logan.f.smyth@gmail.com"
+    },
+    {
+      "name": "Drew Stokes",
+      "email": "drew@drewstokes.com"
+    }
+  ],
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
+  "bugs": {
+    "url": "https://github.com/inkling/backbone.native/issues"
+  }
+}
