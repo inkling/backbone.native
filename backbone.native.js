@@ -229,8 +229,15 @@
                 div.removeChild(div.firstChild);
                 this.length = 1;
             } else {
-                this[0] = context.querySelector(element);
-                this.length = 1;
+                element = context.querySelector(element);
+                
+                // Length must be 0 if no elements found
+                if (element !== null){
+                    this[0] = element;
+                    this.length = 1;
+                } else {
+                    this.length = 0;
+                }
             }
         } else {
             // This handles both the 'Element' and 'Window' case, as both support
