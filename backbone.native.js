@@ -230,8 +230,8 @@
                 this.length = 1;
             } else {
                 element = context.querySelector(element);
-                
-                // Length must be 0 if no elements found
+
+                // Length must be 0 if no elements found.
                 if (element !== null){
                     this[0] = element;
                     this.length = 1;

@@ -218,6 +218,13 @@ describe('Backbone.Native', function(){
             expect(inst[0]).toBeUndefined();
         });
 
+        it('should create an empty set when called with missing id', function(){
+            inst = $('#some-random-id');
+
+            expect(inst.length).toBe(0);
+            expect(inst[0]).toBeUndefined();
+        });
+
         it('should create a new element when passed HTML', function(){
             inst = $('<div class="hi">Content</div>');
 
