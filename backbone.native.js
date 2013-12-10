@@ -229,14 +229,13 @@
                 div.removeChild(div.firstChild);
                 this.length = 1;
             } else {
-                element = context.querySelector(element);
-                
-                // Length must be 0 if no elements found
-                if (element !== null){
-                    this[0] = element;
-                    this.length = 1;
-                } else {
-                    this.length = 0;
+                var elements = context.querySelectorAll(element);
+                this.length = elements.length;
+                // Length is 0 if no elements found
+                if (elements.length > 0) {
+                    for (var i = 0; i < this.length; i++){
+                        this[i] = elements[i];
+                    }
                 }
             }
         } else {
