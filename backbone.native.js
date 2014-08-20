@@ -397,6 +397,7 @@
         var type = options.type || 'GET';
         var url = options.url;
         var processData = options.processData === undefined ? true : !!options.processData;
+        var contentType = options.contentType || 'application/x-www-form-urlencoded; charset=UTF-8';
 
         // Process the data for sending.
         var data = options.data;
@@ -416,7 +417,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open(type, url, true);
 
-        if (options.contentType) xhr.setRequestHeader('Content-Type', options.contentType);
+        xhr.setRequestHeader('Content-Type', contentType);
         if (options.beforeSend) options.beforeSend(xhr);
 
         xhr.onload = function(){
