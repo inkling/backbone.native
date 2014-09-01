@@ -16,6 +16,26 @@ jQuery.
 Simply drop backbone.native.min.js into a page after Backbone has been loaded and it will
 automatically set itself up with Backbone, and create `$` and `Backbone.Native`.
 
+### How to use as a [component](https://github.com/component/component)
+
+Declare the dependency in your component.json
+
+    {
+        …
+        "dependencies": {
+            "inkling/backbone.native": "*",
+            "components/backbone": "*"
+        }
+        …
+    }
+
+Then, attach this dependency to backbone in your code:
+
+```javascript
+var bb = require('backbone');
+bb.$ = require('backbone.native');
+```
+
 ## Major differences between jQuery and Native APIs
 
 The goal of this library is to keep the code as simple as possible while preserving Backbone's
