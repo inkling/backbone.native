@@ -298,8 +298,9 @@
         },
 
         /**
-         * Set the HTML content of the element. Backbone does not use the no-argument version
-         * to read innerHTML, so that has not been implemented.
+         * Set the HTML content of the element. 
+         * Backbone does not use the no-argument version however Backbone Marionette
+         * does in order to read innerHTML, so this has also been implemented.
          *
          * Used in Backbone.View.prototype.make.
          *
@@ -308,8 +309,12 @@
          * @return {$} This instance.
          */
         html: function(html){
-            this[0].innerHTML = html;
-            return this;
+            if( html ) {
+                this[0].innerHTML = html;
+                return this;
+            } else {
+                return this[0].innerHTML;
+            }
         },
 
         /**
